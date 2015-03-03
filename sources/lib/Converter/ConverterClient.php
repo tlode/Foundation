@@ -124,6 +124,22 @@ class ConverterClient extends Client
     }
 
     /**
+     * toPhpType
+     *
+     * Returns the PHP type representation for this converter
+     *
+     * @access public
+     * @param string $type
+     * @return string PHP type name
+     */
+    public function toPhpType($type = null)
+    {
+        return $this->converter->toPhpType(
+            $type === null ? $this->getClientIdentifier() : $type
+        );
+    }
+
+    /**
      * getConverter
      *
      * Return the embeded converter.

@@ -128,6 +128,17 @@ class PgArray extends ArrayTypeConverter
                 ));
     }
 
+
+    /**
+     * @see ConverterInterface
+     * @param string $type
+     * @return string
+     */
+    public function toPhpType($type)
+    {
+        return 'array';
+    }
+
     /**
      * getSubtypeConverter
      *

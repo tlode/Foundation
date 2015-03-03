@@ -100,6 +100,18 @@ class PgJson implements ConverterInterface
             ;
     }
 
+
+    /**
+     * @see ConverterInterface
+     * @param $type
+     * @return string
+     */
+    public function toPhpType($type)
+    {
+        return $this->is_array ? 'array' : 'object';
+    }
+
+
     /**
      * jsonEncode
      *

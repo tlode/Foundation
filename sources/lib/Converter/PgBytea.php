@@ -63,6 +63,17 @@ class PgBytea implements ConverterInterface
             ;
     }
 
+
+    /**
+     * @see ConverterInterface
+     * @param string $type
+     * @return string
+     */
+    public function toPhpType($type)
+    {
+        return 'string';
+    }
+
     /**
      * escapeByteString
      *

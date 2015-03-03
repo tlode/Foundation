@@ -69,4 +69,16 @@ class PgLtree extends ArrayTypeConverter
             : null
             ;
     }
+
+
+    /**
+     * @see ConverterInterface
+     * @param string $type
+     * @return string
+     */
+    public function toPhpType($type)
+    {
+        return 'array';
+    }
+
 }

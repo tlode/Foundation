@@ -67,4 +67,23 @@ class PgNumber implements ConverterInterface
             : null
             ;
     }
+
+
+    /**
+     * @see ConverterInterface
+     * @param string $type
+     * @return string
+     */
+    public function toPhpType($type)
+    {
+        switch($type) {
+            case 'numeric':
+            case 'float4':
+            case 'float8':
+                return 'float';
+        }
+
+        return 'int';
+    }
+
 }

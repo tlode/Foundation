@@ -76,4 +76,16 @@ interface ConverterInterface
      * @return string   Postgrsql standard representation.
      */
     public function toPgStandardFormat($data, $type, Session $session);
+
+
+    /**
+     * toPhpType
+     *
+     * Returns the PHP type representation of for a converter
+     *
+     * @access public
+     * @param string $type
+     * @return string PHP type name
+     */
+    public function toPhpType($type);
 }

@@ -94,4 +94,16 @@ class PgTimestamp implements ConverterInterface
 
         return $data;
     }
+
+
+    /**
+     * @see ConverterInterface
+     * @param $type
+     * @return string
+     */
+    public function toPhpType($type)
+    {
+        return '\DateTime';
+    }
+
 }

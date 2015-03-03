@@ -99,6 +99,17 @@ abstract class TypeConverter implements ConverterInterface
             ;
     }
 
+
+    /**
+     * @see ConverterInterface
+     * @param string $type
+     * @return string
+     */
+    public function toPhpType($type)
+    {
+        return $this->getTypeClassName();
+    }
+
     /**
      * checkData
      *

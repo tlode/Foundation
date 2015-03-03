@@ -68,6 +68,17 @@ class PgHstore extends ArrayTypeConverter
         return sprintf('%s', join(', ', $this->buildArray($this->checkArray($data), $session)));
     }
 
+
+    /**
+     * @see ConverterInterface
+     * @param $type
+     * @return string
+     */
+    public function toPhpType($type)
+    {
+        return 'array';
+    }
+
     /**
      * buildArray
      *

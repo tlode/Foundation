@@ -54,4 +54,16 @@ class PgString implements ConverterInterface
     {
         return $data !== null ? (string) $data : null;
     }
+
+
+    /**
+     * @see ConverterInterface
+     * @param $type
+     * @return string
+     */
+    public function toPhpType($type)
+    {
+        return 'string';
+    }
+
 }
